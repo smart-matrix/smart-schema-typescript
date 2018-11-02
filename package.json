@@ -1,0 +1,39 @@
+{
+  "name": "@smart-matrix/smart-schema-typescript",
+  "version": "0.0.1",
+  "private": false,
+  "main": "dist/smart-schema.umd",
+  "types": "dist/smart-schema.umd",
+  "files": [
+    "dist/*",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --target lib --name smart-schema ./src/main.ts",
+    "build-deploy": "npm version patch && npm build && npm run deploy",
+    "deploy": "npm publish --access public",
+    "lint": "vue-cli-service lint",
+    "test:unit": "vue-cli-service test:unit"
+  },
+  "dependencies": {
+    "protobufjs": "6.8.8",
+    "vue": "^2.5.17",
+    "vue-class-component": "^6.0.0",
+    "vue-property-decorator": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.0",
+    "@types/mocha": "^5.2.4",
+    "@vue/cli-plugin-babel": "^3.1.0",
+    "@vue/cli-plugin-typescript": "^3.1.0",
+    "@vue/cli-plugin-unit-mocha": "^3.1.0",
+    "@vue/cli-service": "^3.1.0",
+    "@vue/test-utils": "^1.0.0-beta.20",
+    "chai": "^4.1.2",
+    "typescript": "^3.0.0",
+    "vue-template-compiler": "^2.5.17"
+  }
+}
