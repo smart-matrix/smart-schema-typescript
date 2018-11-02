@@ -1,12 +1,12 @@
 {
   "name": "@smart-matrix/smart-schema-typescript",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": false,
   "main": "dist/smart-schema.umd",
   "types": "dist/@smart-matrix/schema",
   "typescript": {
-		"definition": "dist/@smart-matrix/schema.d.ts"
-	},
+    "definition": "dist/@smart-matrix/schema.d.ts"
+  },
   "files": [
     "dist/*",
     "public/*",
