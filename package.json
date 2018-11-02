@@ -5,7 +5,7 @@
   "main": "dist/smart-schema.umd",
   "types": "dist/@smart-matrix/schema",
   "typescript": {
-    "definition": "dist/@smart-matrix/schema.d.ts"
+    "definition": "dist/@smart-matrix/smart-schema-typescript.d.ts"
   },
   "files": [
     "dist/*",
@@ -17,7 +17,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "npm run build:lib && npm run build:bundle",
-    "build:bundle": "vue-cli-service bundle-dts --removeSource",
+    "build:bundle": "vue-cli-service bundle-dts --name @smart-matrix/smart-schema --removeSource",
     "build:lib": "vue-cli-service build --target lib --name smart-schema ./src/main.ts",
     "build-deploy": "npm version patch && npm build && npm run deploy",
     "deploy": "npm publish --access public",
