@@ -1,6 +1,6 @@
 {
   "name": "@smart-matrix/smart-schema-typescript",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "private": false,
   "main": "dist/smart-schema.umd",
   "types": "dist/smart-schema.umd",
