@@ -1,21 +1,28 @@
 {
   "name": "@smart-matrix/smart-schema-typescript",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
   "main": "dist/smart-schema.umd",
-  "types": "dist/smart-schema.umd",
+  "types": "dist/@smart-matrix/schema",
+  "typescript": {
+		"definition": "dist/@smart-matrix/schema.d.ts"
+	},
   "files": [
     "dist/*",
+    "public/*",
     "LICENSE",
     "package.json",
     "README.md"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name smart-schema ./src/main.ts",
+    "build": "npm run build:lib && npm run build:bundle",
+    "build:bundle": "vue-cli-service bundle-dts --name @smart-matrix/schema --removeSource",
+    "build:lib": "vue-cli-service build --target lib --name smart-schema ./src/main.ts",
     "build-deploy": "npm version patch && npm build && npm run deploy",
     "deploy": "npm publish --access public",
     "lint": "vue-cli-service lint",
+    "install-bundler": "vue add ts-bundler",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
@@ -24,16 +31,23 @@
     "vue-class-component": "^6.0.0",
     "vue-property-decorator": "^7.0.0"
   },
+  "peerDependencies": {
+    "@smart-matrix/smart-schema-json": "0.0.3",
+    "@smart-matrix/smart-schema-protobuf": "0.0.7"
+  },
   "devDependencies": {
     "@types/chai": "^4.1.0",
     "@types/mocha": "^5.2.4",
-    "@vue/cli-plugin-babel": "^3.1.0",
-    "@vue/cli-plugin-typescript": "^3.1.0",
-    "@vue/cli-plugin-unit-mocha": "^3.1.0",
-    "@vue/cli-service": "^3.1.0",
+    "@types/vue": "^2.0.0",
+    "@vue/cli-plugin-babel": "^3.0.5",
+    "@vue/cli-plugin-e2e-nightwatch": "^3.0.5",
+    "@vue/cli-plugin-typescript": "^3.0.5",
+    "@vue/cli-plugin-unit-mocha": "^3.0.5",
+    "@vue/cli-service": "^3.0.5",
     "@vue/test-utils": "^1.0.0-beta.20",
     "chai": "^4.1.2",
     "typescript": "^3.0.0",
+    "vue-cli-plugin-ts-bundler": "0.0.3",
     "vue-template-compiler": "^2.5.17"
   }
 }
