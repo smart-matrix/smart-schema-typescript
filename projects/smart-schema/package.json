@@ -1,6 +1,6 @@
 {
   "name": "@smart-matrix/smart-schema",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "scripts": {
     "version:patch": "npm version patch"
   },

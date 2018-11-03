@@ -12,7 +12,8 @@
     "git:add": "git add -A",
     "version": "npm run version:lib && npm run git:add && npm run version:demo",
     "version:lib": "npm run version:patch --prefix projects/smart-schema",
-    "version:demo": "npm run version",
+    "version:demo": "npm run version:patch",
+    "version:patch": "npm version patch",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
