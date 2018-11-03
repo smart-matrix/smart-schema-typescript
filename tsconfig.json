@@ -1,44 +1,29 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "target": "es5",
-    "module": "es2015",
-    "strict": true,
-    "jsx": "preserve",
-    "importHelpers": true,
-    "moduleResolution": "node",
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
     "sourceMap": true,
-    "outDir": "./dist/src",
-    "baseUrl": ".",
-    "declaration": true,
-    "types": [
-      "webpack-env",
-      "mocha",
-      "chai"
+    "declaration": false,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
     ],
     "paths": {
-      "@/*": [
-        "src/*"
+      "smart-schema": [
+        "dist/smart-schema"
+      ],
+      "smart-schema/*": [
+        "dist/smart-schema/*"
       ]
-    },
-    "lib": [
-      "es2015",
-      "dom",
-      "dom.iterable",
-      "scripthost"
-    ]
-  },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue"
-  ],
-  "exclude": [
-    "node_modules",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
-  ]
+    }
+  }
 }
