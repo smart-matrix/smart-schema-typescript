@@ -7,8 +7,12 @@
     "build": "npm run build:lib",
     "build:lib": "ng build smart-schema",
     "build:demo": "ng build smart-schema-demo",
-    "deploy": "npm version patch && npm run build && npm run deploy:lib",
+    "deploy": "npm run version && npm run build && npm run deploy:lib",
     "deploy:lib": "npm publish ./dist/smart-schema --access public",
+    "version": "npm run version:lib && npm run version:demo",
+    "version:lib": "npm fun version:patch --prefix projects/smart-schema",
+    "version:demo": "npm run version:patch",
+    "version:patch": "npm version patch",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
