@@ -1,6 +1,6 @@
 {
   "name": "@smart-matrix/smart-schema-demo",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -12,8 +12,7 @@
     "git:add": "git add -A",
     "version": "npm run version:lib && npm run git:add && npm run version:demo",
     "version:lib": "npm run version:patch --prefix projects/smart-schema",
-    "version:demo": "npm run version:patch",
-    "version:patch": "npm version patch",
+    "version:demo": "npm run version",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
