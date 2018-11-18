@@ -3,3 +3,4 @@
  */
 
 export * from './lib/DAF';
+export * from './lib/LCU';

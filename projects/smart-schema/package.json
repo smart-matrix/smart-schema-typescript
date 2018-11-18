@@ -1,8 +1,8 @@
 {
   "name": "@smart-matrix/smart-schema",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "scripts": {
-    "version:patch": "npm version patch -m 'Upgrade to %s for reasons'"
+    "version:patch": "npm version patch"
   },
   "peerDependencies": {
     "@angular/common": "^7.0.0",
